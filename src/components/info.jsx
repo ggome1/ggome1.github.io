@@ -94,7 +94,7 @@ const Info = () => {
             viewport={{ once: false }}
             transition={{
               ease: "easeInOut",
-              duration: 1,
+              duration: 0.5,
               delay: 1.7,
             }}
           >
@@ -125,7 +125,7 @@ const Info = () => {
             viewport={{ once: false }}
             transition={{
               ease: "easeInOut",
-              duration: 0.7,
+              duration: 0.5,
               delay: 2.2,
             }}
           >
