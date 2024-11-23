@@ -7,6 +7,7 @@ import Project from "./components/project";
 import Nav from "./components/nav";
 import Skill from "./components/skill";
 import Fin from "./components/fin";
+import SNS from "./components/sns";
 
 export const ReadMeContext = createContext({});
 
@@ -25,6 +26,7 @@ function App() {
       <ReadMeContext.Provider value={value}>
         <ScrollHandler />
         <Nav />
+        <SNS />
         <Intro />
         <Info />
         <Skill />

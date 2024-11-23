@@ -10,12 +10,12 @@ import { IoMdSchool } from "react-icons/io";
 
 const Info = () => {
   return (
-    <div className="h-screen py-8 px-16 bg-[#1b1b1b] flex flex-col gap-20 ">
-      <div className="w-full text-[60px] font-sba text-[#D2E0FB] flex items-center gap-8">
-        <div className="text-[40px]">01.</div>
+    <div className="h-screen py-8 px-16 bg-[#1b1b1b] flex flex-col gap-10 ">
+      <div className="w-full text-[3.5rem] font-sba text-[#D2E0FB] flex items-center gap-8">
+        <div className="text-[2.5rem]">01.</div>
         <div>INFO</div>
       </div>
-      <div className="flex flex-col items-center gap-20">
+      <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col gap-8">
           <motion.div
             initial={{ opacity: 0, scale: 1, y: 200 }}
@@ -27,7 +27,7 @@ const Info = () => {
               delay: 0.3,
             }}
           >
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center gap-[4rem]">
               <div className="max-w-[300px]">
                 <img
                   className="rounded-2xl flex"
@@ -35,7 +35,7 @@ const Info = () => {
                   alt="profile"
                 />
               </div>
-              <div className="flex flex-col gap-6 text-[#ffffff]">
+              <div className="flex flex-col gap-[1rem] text-[#ffffff]">
                 <InfoElement
                   icon={<IoPersonSharp className="absolute" size={20} />}
                   title={"이름"}
@@ -70,7 +70,7 @@ const Info = () => {
             </div>
           </motion.div>
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6">
           <motion.div
             initial={{ opacity: 0, scale: 1 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -81,8 +81,8 @@ const Info = () => {
               delay: 1.0,
             }}
           >
-            <div className="px-8 font-title font-bold text-[40px] text-[#D2E0FB]">
-              Question
+            <div className="px-8 font-title font-bold text-[3rem] text-[#D2E0FB]">
+              Story
             </div>
           </motion.div>
           <motion.div
@@ -98,21 +98,18 @@ const Info = () => {
               delay: 1.7,
             }}
           >
-            <div className="bg-[#3b3b3b] py-8 px-8 rounded-3xl flex flex-col gap-6">
-              <div className="font-title text-4xl">
+            <div className="bg-[#3b3b3b] py-6 px-8 rounded-3xl flex flex-col gap-6">
+              <div className="font-title text-[2rem]">
                 Q. 프론트엔드를 선택한 이유?
               </div>
-              <div className="font-label">
-                웹 디자이너로 활동하며 사용자 중심 디자인, 협업, 프론트엔드 기초
-                지식을 쌓았습니다.
+              <div className="font-label text-[1rem]">
+                사용자에게 가장 먼저, 그리고 많이 영향을 주는 프론트엔드 개발에 흥미를 느꼈습니다.
                 <br />
-                사용자와의 소통에 대해 중요성을 인지하고, 더 밀접하게 상호작용
-                가능한 프로젝트를 개발하고자 프론트엔드 개발자로 전향을 결심하게
-                되었습니다.
+                사이트를 처음 접속했을 때, 보통 사용자들은 UI에 먼저 눈이 가기 마련입니다.
                 <br />
-                React, Styled Components, Redux Toolkit 등 다양한 프레임워크와
-                라이브러리를 도입해 발전할 수 있는 새로운 도전에 나서고
-                있습니다.
+                다양한 UI 및 UX를 개발을 진행하며 적용해 본 후에 어떤 방법이 서비스에 어울릴지, 사용자들로 하여금 만족을 일으킬지 고민하는 시간이 즐거웠습니다.
+                <br />
+                웹 개발을 학습하며 광범위한 기술 중 적합한 기술을 찾아 프로젝트에 하나씩 적용해 익혀 나가는 것이 적성에 맞았고, 망설임 없이 프론트엔드를 선택하였습니다.
               </div>
             </div>
           </motion.div>
@@ -130,20 +127,19 @@ const Info = () => {
             }}
           >
             <div className="bg-[#3b3b3b] py-8 px-8 rounded-3xl flex flex-col gap-6">
-              <div className="font-title text-4xl">
-                Q. 프론트엔드를 선택한 이유?
+              <div className="font-title text-[2rem]">
+                Q. 자기계발을 어떤 방식으로 하는지?
               </div>
-              <div className="font-label">
-                웹 디자이너로 활동하며 사용자 중심 디자인, 협업, 프론트엔드 기초
-                지식을 쌓았습니다.
+              <div className="font-label text-[1rem]">
+                새로운 기술을 접하면 항상 공식 문서를 찾아 학습하고 있습니다.
                 <br />
-                사용자와의 소통에 대해 중요성을 인지하고, 더 밀접하게 상호작용
-                가능한 프로젝트를 개발하고자 프론트엔드 개발자로 전향을 결심하게
-                되었습니다.
+                기술의 장단점을 정리하여 매 프로젝트 시작 시에 주제에 적합한 기술을 엄선해서 사이트의 성능을 높이고자 노력합니다.
                 <br />
-                React, Styled Components, Redux Toolkit 등 다양한 프레임워크와
-                라이브러리를 도입해 발전할 수 있는 새로운 도전에 나서고
-                있습니다.
+                개인 프로젝트 뿐만 아니라 최대한 팀 프로젝트를 진행해 팀원 간 의사소통 경험을 하고자 합니다.
+                <br />
+                코드 작성 스타일이 고착되지 않기 위해 평소 다른 이들의 스타일을 많이 살펴보고, 그들의 장점을 흡수하려고 노력합니다.
+                <br />
+                알고리즘 또한 웹 개발 못지 않게 문제 풀이를 통해 실력을 증진 중입니다.
               </div>
             </div>
           </motion.div>

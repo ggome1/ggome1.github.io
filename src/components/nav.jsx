@@ -87,7 +87,7 @@ const Nav = () => {
             });
           }}
           className={`cursor-pointer ${
-            curScroll === "PROJECT" && "text-[#c04343]"
+            curScroll === "PROJECT" && "text-[#e5f051]"
           }`}
         >
           PROJECT
