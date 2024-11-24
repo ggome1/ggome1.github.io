@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      textStroke: {
+        black: "1px black",
+      },
       screens: {
         "3xl": "1800px",
       },
@@ -31,7 +34,7 @@ module.exports = {
         "neutral-90": "#1C1E22",
         "neutral-100": "#0C0C0C",
 
-        "yell": "#ffb649",
+        yell: "#ffb649",
 
         "primary-10": "#F2FCFC",
         "primary-20": "#D7F7F7",
@@ -56,5 +59,13 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-stroke-black": {
+          "-webkit-text-stroke": "1px black",
+        },
+      });
+    },
+  ],
 };

@@ -70,7 +70,7 @@ const Info = () => {
             </div>
           </motion.div>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 overflow-hidden">
           <motion.div
             initial={{ opacity: 0, scale: 1 }}
             whileInView={{ opacity: 1, scale: 1 }}
