@@ -121,12 +121,12 @@ const skillData = {
 
 const SideMenu = ({ skills, curSkill, onClick }) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex md:flex-col gap-2 overflow-scroll">
       {skills.map((skill, index) => (
         <div
           key={index}
           onClick={() => onClick(skill)}
-          className={`cursor-pointer border-l-4 px-8 py-4 text-[1rem] ${
+          className={`cursor-pointer border-b-4 md:border-l-4 md:border-b-0 py-4 text-[1rem] text-center min-w-[10rem] ${
             curSkill === skill
               ? "text-white border-neutral-0"
               : "text-neutral-40 border-neutral-40"
@@ -150,7 +150,7 @@ const SkillDetails = ({ data }) => {
           transition={{ duration: 0.5, delay: 0.1 * index }}
         >
           <div key={index} className="flex gap-[2rem] items-center">
-            <div className="w-[5rem] h-[5rem] border-2 border-primary-50 bg-[#a58b5c] rounded-full py-[1rem] px-[1rem]">
+            <div className="max-w-[5rem] max-h-[5rem] min-w-[5rem] min-h-[5rem] border-2 border-primary-50 bg-[#a58b5c] rounded-full py-[1rem] px-[1rem]">
               <img
                 src={`${process.env.PUBLIC_URL}/images/${item.logo}.svg`}
                 alt={item.title}
@@ -179,7 +179,7 @@ const Skill = () => {
         <div>SKILL</div>
       </div>
       <div className="max-w-[1000px]">
-        <div className="flex gap-[1rem]">
+        <div className="flex md:flex-row flex-col gap-[3rem]">
           <SideMenu skills={skills} curSkill={curSkill} onClick={setCurSkill} />
           <SkillDetails data={skillData[curSkill]} />
         </div>

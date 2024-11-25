@@ -10,12 +10,12 @@ import { IoMdSchool } from "react-icons/io";
 
 const Info = () => {
   return (
-    <div className="h-screen py-8 px-16 bg-[#1b1b1b] flex flex-col gap-10 ">
+    <div className="h-screen py-8 px-16 bg-[#1b1b1b] flex flex-col gap-10">
       <div className="w-full text-[3.5rem] font-sba text-[#D2E0FB] flex items-center gap-8">
         <div className="text-[2.5rem]">01.</div>
         <div>INFO</div>
       </div>
-      <div className="flex flex-col items-center gap-10">
+      <div className="flex flex-col flex-1 items-center gap-10">
         <div className="flex flex-col gap-8">
           <motion.div
             initial={{ opacity: 0, scale: 1, y: 200 }}
@@ -28,9 +28,9 @@ const Info = () => {
             }}
           >
             <div className="flex justify-center items-center gap-[4rem]">
-              <div className="max-w-[300px]">
+              <div className="max-w-[20rem]">
                 <img
-                  className="rounded-2xl flex"
+                  className="rounded-2xl"
                   src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
                   alt="profile"
                 />
@@ -70,7 +70,7 @@ const Info = () => {
             </div>
           </motion.div>
         </div>
-        <div className="flex flex-col gap-6 overflow-hidden">
+        <div className="flex flex-col gap-6 overflow-scroll">
           <motion.div
             initial={{ opacity: 0, scale: 1 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -81,8 +81,8 @@ const Info = () => {
               delay: 1.0,
             }}
           >
-            <div className="px-8 font-title font-bold text-[3rem] text-[#D2E0FB]">
-              Story
+            <div className="px-8 font-title font-bold text-[2.5rem] text-[#D2E0FB]">
+              About Me
             </div>
           </motion.div>
           <motion.div
@@ -99,7 +99,7 @@ const Info = () => {
             }}
           >
             <div className="bg-[#3b3b3b] py-6 px-8 rounded-3xl flex flex-col gap-6">
-              <div className="font-title text-[2rem]">
+              <div className="font-title text-[1.5rem]">
                 Q. 프론트엔드를 선택한 이유?
               </div>
               <div className="font-label text-[1rem]">
@@ -127,7 +127,7 @@ const Info = () => {
             }}
           >
             <div className="bg-[#3b3b3b] py-8 px-8 rounded-3xl flex flex-col gap-6">
-              <div className="font-title text-[2rem]">
+              <div className="font-title text-[1.5rem]">
                 Q. 자기계발을 어떤 방식으로 하는지?
               </div>
               <div className="font-label text-[1rem]">
