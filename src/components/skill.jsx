@@ -126,7 +126,7 @@ const SideMenu = ({ skills, curSkill, onClick }) => {
         <div
           key={index}
           onClick={() => onClick(skill)}
-          className={`cursor-pointer border-b-4 md:border-l-4 md:border-b-0 py-4 text-[1rem] text-center min-w-[10rem] ${
+          className={`cursor-pointer border-b-4 md:border-l-4 md:border-b-0 py-4 text-[1rem] text-center min-w-[8rem] ${
             curSkill === skill
               ? "text-white border-neutral-0"
               : "text-neutral-40 border-neutral-40"
@@ -173,7 +173,7 @@ const Skill = () => {
   const [curSkill, setCurSkill] = useState("Language");
 
   return (
-    <div className="h-screen py-8 px-[5rem] bg-[#0a0a25] flex flex-col gap-[4rem]">
+    <div className="h-[100dvh] py-8 px-[5rem] bg-[#0a0a25] flex flex-col gap-[4rem]">
       <div className="w-full text-[3.5rem] font-sba text-[#e4a648] flex items-center gap-[2rem]">
         <div className="text-[2.5rem]">02.</div>
         <div>SKILL</div>

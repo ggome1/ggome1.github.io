@@ -23,7 +23,7 @@ const Intro = () => {
     };
   }, []);
   return (
-    <div className="bg-[#222831] text-[#D8CEB5] relative overflow-hidden font-sba w-screen h-screen flex flex-col text-center justify-center items-center md:text-[50px] text-[30px] px-8 py-4">
+    <div className="bg-[#222831] text-[#D8CEB5] relative overflow-hidden font-sba w-screen h-[100dvh] flex flex-col text-center justify-center items-center md:text-[50px] text-[30px] px-8 py-4">
       {/* <motion.div key={index} {...motionSettings(text.direction)}>
           <div className="text-white">{text.content}</div>
         </motion.div> */}

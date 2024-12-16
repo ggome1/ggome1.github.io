@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Fin = () => {
   return (
-    <div className="h-screen py-8 px-[5rem] bg-white flex flex-col gap-[4rem]">
+    <div className="h-[100dvh] py-8 px-[5rem] bg-white flex flex-col gap-[4rem]">
       <div className="absolute text-black text-[3.5rem] font-sba">
         <div>FIN</div>
       </div>
@@ -34,7 +34,7 @@ const Fin = () => {
             }}
           >
             <div className="text-[4rem] font-title text-black z-20">
-              끝까지 봐 주셔서 감사합니다.
+              끝까지 봐 주셔서<br /> 감사합니다.
             </div>
           </motion.div>
         </div>
@@ -51,7 +51,7 @@ const Fin = () => {
           <div className="text-black font-label text-center">
             <div>끊임없이 학습하는,</div>
             <div>사용자의 입장에서 먼저 생각하는,</div>
-            <div>프론트엔드 개발자가 되기 위해 노력하겠습니다.</div>
+            <div>프론트엔드 개발자가 되기 위해<br />노력하겠습니다.</div>
           </div>
         </motion.div>
       </div>

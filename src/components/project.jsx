@@ -42,7 +42,7 @@ const projectData = [
 const Project = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
   return (
-    <div className="h-screen py-8 px-[5rem] bg-[#1a0c24] flex flex-col gap-20">
+    <div className="h-[100dvh] py-8 px-[5rem] bg-[#1a0c24] flex flex-col gap-20">
       <div className="w-full text-[3.5rem] font-sba text-[#e5f051] flex items-center gap-8">
         <div className="text-[2.5rem]">02.</div>
         <div>PROJECT</div>

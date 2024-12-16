@@ -3,16 +3,21 @@ import { ReadMeContext } from "../App";
 
 const ScrollHandler = () => {
   const { readMe } = useContext(ReadMeContext);
-
-  // 터치 시작 지점을 저장
-  const touchStartY = useRef(0);
+  const touchStartY = useRef(0); // 터치 시작 지점 저장
+  const viewportHeight = useRef(window.innerHeight); // 동적 높이 저장
 
   useEffect(() => {
+    // 화면 높이를 동적으로 계산
+    const updateViewportHeight = () => {
+      viewportHeight.current =
+        window.visualViewport?.height || window.innerHeight;
+    };
+
     const handleScroll = (event) => {
       event.preventDefault();
 
       const currentScroll = window.scrollY;
-      const windowHeight = window.innerHeight;
+      const windowHeight = viewportHeight.current; // 동적 높이 적용
 
       if (readMe) return;
 
@@ -36,31 +41,37 @@ const ScrollHandler = () => {
     };
 
     const handleTouchStart = (event) => {
-      touchStartY.current = event.touches[0].clientY;
+      touchStartY.currentX = event.touches[0].clientX; // 터치 시작 X 좌표 저장
+      touchStartY.currentY = event.touches[0].clientY; // 터치 시작 Y 좌표 저장
     };
 
     const handleTouchMove = (event) => {
-      event.preventDefault();
+      const touchEndX = event.touches[0].clientX; // 터치 끝난 X 좌표
+      const touchEndY = event.touches[0].clientY; // 터치 끝난 Y 좌표
 
-      const touchEndY = event.touches[0].clientY;
-      const deltaY = touchStartY.current - touchEndY;
+      const deltaX = touchStartY.currentX - touchEndX; // 가로 이동 거리
+      const deltaY = touchStartY.currentY - touchEndY; // 세로 이동 거리
+
+      const windowHeight = viewportHeight.current;
 
       const currentScroll = window.scrollY;
-      const windowHeight = window.innerHeight;
 
-      if (readMe) return;
+      if (readMe) return; // 특정 상태일 때 실행 중단
 
-      const currentSection = Math.round(currentScroll / windowHeight);
+      // 수직 스크롤만 방지하고, 수평 이동은 허용
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        event.preventDefault();
 
-      if (deltaY > 50) {
-        // 아래로 스크롤
-        window.scrollTo({
-          top: (currentSection + 1) * windowHeight,
-          behavior: "smooth",
-        });
-      } else if (deltaY < -50) {
-        // 위로 스크롤
-        if (currentSection > 0) {
+        const currentSection = Math.round(currentScroll / windowHeight);
+
+        if (deltaY > 50) {
+          // 아래로 스크롤
+          window.scrollTo({
+            top: (currentSection + 1) * windowHeight,
+            behavior: "smooth",
+          });
+        } else if (deltaY < -50 && currentSection > 0) {
+          // 위로 스크롤
           window.scrollTo({
             top: (currentSection - 1) * windowHeight,
             behavior: "smooth",
@@ -69,11 +80,19 @@ const ScrollHandler = () => {
       }
     };
 
+    // 화면 높이 재계산 (툴바 변화 시)
+    window.addEventListener("resize", updateViewportHeight);
+
+    // 이벤트 리스너 등록
     window.addEventListener("wheel", handleScroll, { passive: false });
     window.addEventListener("touchstart", handleTouchStart, { passive: true });
     window.addEventListener("touchmove", handleTouchMove, { passive: false });
 
+    // 초기 높이 계산
+    updateViewportHeight();
+
     return () => {
+      window.removeEventListener("resize", updateViewportHeight);
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);

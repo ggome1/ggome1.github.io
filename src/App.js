@@ -26,7 +26,7 @@ function App() {
       style={{
         cursor: `url(${process.env.PUBLIC_URL}/images/circle.svg) 2 2, auto`,
       }}
-      className="w-screen bg-neutral-90 text-neutral-20"
+      className="w-[100dvh] bg-neutral-90 text-neutral-20"
     >
       <ReadMeContext.Provider value={value}>
         <ScrollHandler />
