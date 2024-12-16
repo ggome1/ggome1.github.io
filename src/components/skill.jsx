@@ -121,7 +121,7 @@ const skillData = {
 
 const SideMenu = ({ skills, curSkill, onClick }) => {
   return (
-    <div className="flex md:flex-col gap-2 overflow-scroll">
+    <div className="flex md:flex-col gap-2 overflow-x-scroll">
       {skills.map((skill, index) => (
         <div
           key={index}
@@ -173,7 +173,7 @@ const Skill = () => {
   const [curSkill, setCurSkill] = useState("Language");
 
   return (
-    <div className="h-screen py-8 px-[2rem] bg-[#0a0a25] flex flex-col gap-[4rem]">
+    <div className="h-screen py-8 px-[5rem] bg-[#0a0a25] flex flex-col gap-[4rem]">
       <div className="w-full text-[3.5rem] font-sba text-[#e4a648] flex items-center gap-[2rem]">
         <div className="text-[2.5rem]">02.</div>
         <div>SKILL</div>

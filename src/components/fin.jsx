@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Fin = () => {
   return (
-    <div className="h-screen py-8 px-[2rem] bg-white flex flex-col gap-[4rem]">
+    <div className="h-screen py-8 px-[5rem] bg-white flex flex-col gap-[4rem]">
       <div className="absolute text-black text-[3.5rem] font-sba">
         <div>FIN</div>
       </div>

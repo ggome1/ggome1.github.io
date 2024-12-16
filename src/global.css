@@ -25,15 +25,17 @@
 }
 
 @font-face {
-  font-family: 'SBAggroB';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-family: "SBAggroB";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'IAMAPLAYER';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+  font-family: "IAMAPLAYER";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -48,13 +50,33 @@
   -webkit-box-orient: vertical;
 }
 
+.slick-list {
+  marign-right: -1rem;
+  marign-left: -1rem;
+}
+.slick-slide {
+  padding-right: 1rem; /* 슬라이드 간 간격 */
+  padding-left: 1rem; /* 슬라이드 간 간격 */
+  height: 100%; /* 부모의 높이를 상속받아 슬라이드 높이 설정 */
+}
+
+.slick-dots li button:before {
+  color: #7c7f83; /* 기본 dot 색상 */
+  font-size: 0.5rem; /* dot 크기 */
+}
+
+/* 선택된 dot 색상 */
+.slick-dots li.slick-active button:before {
+  color: #ffffff; /* 활성화된 dot 색상 */
+}
+
 body,
 html {
   font-family: "Pretendard", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #D0D3D8;
-  background-color: #1C1E22;
+  color: #d0d3d8;
+  background-color: #1c1e22;
 }
 
 @media screen and (max-width: 768px) {
@@ -63,7 +85,7 @@ html {
   }
 }
 
-@media  screen and (min-width: 768px) and( max-width: 1024px) { 
+@media screen and (min-width: 768px) and( max-width: 1024px) {
   :root {
     font-size: 12px;
   }
@@ -80,7 +102,6 @@ html {
     font-size: 16px;
   }
 }
-
 input,
 textarea {
   font-size: 16px;

@@ -25,14 +25,14 @@ const projectData = [
   },
   {
     title: "PORTFOLIO",
-    description: '프론트앤드 개발자 박승준 포트폴리오',
+    description: <>프론트앤드 개발자 박승준<br /> 포트폴리오</>,
     github: "https://github.com/ggome1/ggome1.github.io",
     url: "https://ggome1.github.io/",
     thumbnail: "3",
   },
   {
     title: "42SEOUL",
-    description: '이노베이션 아카데미 주관 개발자 양성 프로그램',
+    description: <>이노베이션 아카데미 주관<br /> 개발자 양성 프로그램</>,
     github: "https://github.com/ggome1/42SEOUL",
     url: "https://42seoul.kr/seoul42/main/view",
     thumbnail: "4",
@@ -42,12 +42,12 @@ const projectData = [
 const Project = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
   return (
-    <div className="h-screen py-8 px-16 bg-[#1a0c24] flex flex-col gap-20">
+    <div className="h-screen py-8 px-[5rem] bg-[#1a0c24] flex flex-col gap-20">
       <div className="w-full text-[3.5rem] font-sba text-[#e5f051] flex items-center gap-8">
         <div className="text-[2.5rem]">02.</div>
         <div>PROJECT</div>
       </div>
-      <div className="flex flex-wrap gap-6 overflow-scroll">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mx-auto">
         {projectData.map((item, index) => (
           <motion.div
             key={`${item.title}-${index}`}
@@ -59,7 +59,7 @@ const Project = () => {
           >
             <div
               key={index}
-              className="rounded-br-[1.5rem] w-[25rem] h-[25rem] cursor-pointer"
+              className="sm:rounded-br-[1.5rem] rounded-br-[1rem] sm:w-[20rem] sm:h-[20rem] w-[12rem] h-[12rem] cursor-pointer px-auto"
               style={{
                 backgroundImage: `url(${process.env.PUBLIC_URL}/images/${item.thumbnail}.png)`,
                 backgroundRepeat: "no-repeat",
@@ -69,14 +69,14 @@ const Project = () => {
               }}
             >
               {hoverIndex === index && (
-                <div className="flex flex-col gap-[1.5rem] font-title bg-white text-black items-center justify-center w-full h-full px-[2rem] py-[2rem]">
+                <div className="flex flex-col sm:gap-[1.5rem] gap-[1rem] font-title bg-white text-black items-center justify-center w-full h-full px-[2rem] py-[2rem]">
                   <div className="flex flex-col gap-[0.5rem] text-center">
-                    <div className="text-[1.5rem]">{item.title}</div>
-                    <div className="text-[1rem]">{item.description}</div>
+                    <div className="sm:text-[1.5rem] text-[1rem]">{item.title}</div>
+                    <div className="sm:text-[1rem] text-[0.5rem]">{item.description}</div>
                   </div>
                   <div className="flex flex-col gap-[0.5rem]">
-                    <button onClick={() => window.open(item.github)} className="hover:text-white hover:bg-black text-[1rem] border-2 border-black px-[3rem] py-[0.5rem] rounded-xl">깃허브 바로가기</button>
-                    <button onClick={() => window.open(item.url)} className="hover:text-white hover:bg-black text-[1rem] border-2 border-black px-[3rem] py-[0.5rem] rounded-xl">사이트 바로가기</button>
+                    <button onClick={() => window.open(item.github)} className="hover:text-white hover:bg-black sm:text-[1rem] text-[0.5rem] w-full border-2 border-black sm:px-[3rem] px-[1rem] sm:py-[0.5rem] py-[0.2rem] rounded-lg">깃허브 바로가기</button>
+                    <button onClick={() => window.open(item.url)} className="hover:text-white hover:bg-black sm:text-[1rem] text-[0.5rem] border-2 border-black sm:px-[3rem] sm:py-[0.5rem] py-[0.2rem] px-[1rem] rounded-lg">사이트 바로가기</button>
                   </div>
                 </div>
               )}

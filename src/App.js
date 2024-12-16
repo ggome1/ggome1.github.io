@@ -22,7 +22,12 @@ function App() {
     }, 100); // 0ms 지연
   }, []);
   return (
-    <div className="w-screen bg-neutral-90 text-neutral-20">
+    <div
+      style={{
+        cursor: `url(${process.env.PUBLIC_URL}/images/circle.svg) 2 2, auto`,
+      }}
+      className="w-screen bg-neutral-90 text-neutral-20"
+    >
       <ReadMeContext.Provider value={value}>
         <ScrollHandler />
         <Nav />

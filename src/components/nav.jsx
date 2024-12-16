@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 
 const Nav = () => {
   const [curScroll, setCurScroll] = useState("INTRO");
-  const [isVisible, setIsVisible] = useState(window.innerWidth > 900); // 초기값 설정
+  const [isVisible, setIsVisible] = useState(window.innerWidth > 1024); // 초기값 설정
   const windowHeight = window.innerHeight;
 
   useEffect(() => {
     const handleResize = () => {
-      setIsVisible(window.innerWidth > 900); // 너비가 900 초과일 때만 visible
+      setIsVisible(window.innerWidth > 1024); // 너비가 1024 초과일 때만 visible
     };
 
     const handleScroll = () => {
@@ -35,7 +35,7 @@ const Nav = () => {
     };
   }, [windowHeight]);
 
-  if (!isVisible) return null; // x가 900 이하일 때 Nav 숨김
+  if (!isVisible) return null; // x가 1024 이하일 때 Nav 숨김
 
   return (
     <div className="fixed top-1/2 transform -translate-y-1/2 right-10 h-[400px] max-w-[100px] rounded-full px-5 z-50">
