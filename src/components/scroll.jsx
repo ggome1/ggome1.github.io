@@ -5,6 +5,7 @@ const ScrollHandler = () => {
   const { readMe } = useContext(ReadMeContext);
   const touchStartY = useRef(0); // 터치 시작 지점 저장
   const viewportHeight = useRef(window.innerHeight); // 동적 높이 저장
+  const isCooldown = useRef(false);
 
   useEffect(() => {
     // 화면 높이를 동적으로 계산
@@ -19,10 +20,10 @@ const ScrollHandler = () => {
       const currentScroll = window.scrollY;
       const windowHeight = viewportHeight.current; // 동적 높이 적용
 
-      if (readMe) return;
+      if (readMe || isCooldown.current) return;
+      isCooldown.current = true;
 
       const currentSection = Math.round(currentScroll / windowHeight);
-
       if (event.deltaY > 0) {
         // 아래로 스크롤
         window.scrollTo({
@@ -38,6 +39,9 @@ const ScrollHandler = () => {
           });
         }
       }
+      setTimeout(() => {
+        isCooldown.current = false;
+      }, 2500);
     };
 
     const handleTouchStart = (event) => {
@@ -78,6 +82,7 @@ const ScrollHandler = () => {
           });
         }
       }
+      
     };
 
     // 화면 높이 재계산 (툴바 변화 시)

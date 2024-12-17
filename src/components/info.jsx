@@ -131,7 +131,7 @@ const Info = () => {
               delay: 1.0,
             }}
           >
-            <div className="lg:px-[12rem] 3xl:px-[32rem] px-8 font-title font-bold text-[2.5rem] text-[#D2E0FB]">
+            <div className="lg:px-[12rem] xl:px-[42rem] px-8 font-title font-bold text-[2.5rem] text-[#D2E0FB]">
               About Me
             </div>
           </motion.div>
@@ -145,7 +145,7 @@ const Info = () => {
               delay: 1.5,
             }}
           >
-            <div className="carousel-container lg:px-[10rem] 3xl:px-[30rem]">
+            <div className="carousel-container lg:px-[10rem] xl:px-[40rem]">
               <Slider {...settings} className="">
                 {content.map((item, index) => (
                   <div className="bg-[#3b3b3b] h-full py-6 px-8 rounded-3xl flex flex-col justify-center">

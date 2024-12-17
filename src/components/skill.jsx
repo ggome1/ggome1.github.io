@@ -121,12 +121,12 @@ const skillData = {
 
 const SideMenu = ({ skills, curSkill, onClick }) => {
   return (
-    <div className="flex md:flex-col gap-2 overflow-x-scroll">
+    <div className="flex sm:flex-col gap-2 overflow-x-scroll">
       {skills.map((skill, index) => (
         <div
           key={index}
           onClick={() => onClick(skill)}
-          className={`cursor-pointer border-b-4 md:border-l-4 md:border-b-0 py-4 text-[1rem] text-center min-w-[8rem] ${
+          className={`cursor-pointer border-b-4 sm:border-l-4 sm:border-b-0 py-4 text-[1rem] text-center min-w-[8rem] ${
             curSkill === skill
               ? "text-white border-neutral-0"
               : "text-neutral-40 border-neutral-40"
@@ -179,7 +179,7 @@ const Skill = () => {
         <div>SKILL</div>
       </div>
       <div className="max-w-[1000px]">
-        <div className="flex md:flex-row flex-col gap-[3rem]">
+        <div className="flex sm:flex-row flex-col gap-[3rem]">
           <SideMenu skills={skills} curSkill={curSkill} onClick={setCurSkill} />
           <SkillDetails data={skillData[curSkill]} />
         </div>
