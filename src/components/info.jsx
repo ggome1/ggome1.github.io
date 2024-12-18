@@ -70,7 +70,7 @@ const Info = () => {
           <br />
           또한, 트렌드를 만들어 나가려는 배포가 있기에 UI 및 UX에도 관심이 있습니다. 
           <br />
-          그렇기에 초기 디자인을 무조건적으로 수용하는 것이 아닌, 디자인 또한 끊임없는 의견 제시를 통해 완성도 있는 프로젝트로 수렴할 수 있도록 노력합니다.
+          그렇기에 초기 디자인을 무조건적으로 수용하는 것이 아닌, 디자인 또한 끊임없는 의견 제시를 통해 완성도 있는 프로젝트로 수렴할 수 노력합니다.
         </>
       ),
     },
@@ -147,7 +147,7 @@ const Info = () => {
               delay: 1.0,
             }}
           >
-            <div className="lg:px-[12rem] xl:px-[42rem] px-8 font-title font-bold text-[2.5rem] text-[#D2E0FB]">
+            <div className="lg:px-[12rem] 3xl:px-[42rem] px-8 font-title font-bold text-[2.5rem] text-[#D2E0FB]">
               About Me
             </div>
           </motion.div>
@@ -161,7 +161,7 @@ const Info = () => {
               delay: 1.5,
             }}
           >
-            <div className="carousel-container lg:px-[10rem] xl:px-[40rem]">
+            <div className="carousel-container lg:px-[10rem] 3xl:px-[40rem]">
               <Slider {...settings} className="">
                 {content.map((item, index) => (
                   <div className="bg-[#3b3b3b] h-full py-6 px-8 rounded-3xl flex flex-col justify-center">
