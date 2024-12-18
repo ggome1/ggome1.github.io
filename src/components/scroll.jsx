@@ -45,36 +45,35 @@ const ScrollHandler = () => {
     };
 
     const handleTouchStart = (event) => {
-      touchStartY.currentX = event.touches[0].clientX; // 터치 시작 X 좌표 저장
-      touchStartY.currentY = event.touches[0].clientY; // 터치 시작 Y 좌표 저장
+      touchStartY.X = event.touches[0].clientX; // 터치 시작 X 좌표 저장
+      touchStartY.Y = event.touches[0].clientY; // 터치 시작 Y 좌표 저장
     };
 
     const handleTouchMove = (event) => {
       const touchEndX = event.touches[0].clientX; // 터치 끝난 X 좌표
       const touchEndY = event.touches[0].clientY; // 터치 끝난 Y 좌표
-
-      const deltaX = touchStartY.currentX - touchEndX; // 가로 이동 거리
-      const deltaY = touchStartY.currentY - touchEndY; // 세로 이동 거리
+      
+      const deltaX = touchStartY.X - touchEndX; // 가로 이동 거리
+      const deltaY = touchStartY.Y - touchEndY; // 세로 이동 거리
+      if (event.target.closest('.allow-scroll') && Math.abs(deltaY) < 10) return;
+      event.preventDefault();
 
       const windowHeight = viewportHeight.current;
 
       const currentScroll = window.scrollY;
 
-      if (readMe) return; // 특정 상태일 때 실행 중단
-
-      // 수직 스크롤만 방지하고, 수평 이동은 허용
+      if (readMe || isCooldown.current) return;
+      isCooldown.current = true;
       if (Math.abs(deltaY) > Math.abs(deltaX)) {
-        event.preventDefault();
-
         const currentSection = Math.round(currentScroll / windowHeight);
-
-        if (deltaY > 50) {
+        console.log(deltaY);
+        if (deltaY > 5) {
           // 아래로 스크롤
           window.scrollTo({
             top: (currentSection + 1) * windowHeight,
             behavior: "smooth",
           });
-        } else if (deltaY < -50 && currentSection > 0) {
+        } else if (deltaY < -5 && currentSection > 0) {
           // 위로 스크롤
           window.scrollTo({
             top: (currentSection - 1) * windowHeight,
@@ -82,7 +81,9 @@ const ScrollHandler = () => {
           });
         }
       }
-      
+      setTimeout(() => {
+        isCooldown.current = false;
+      }, 1000);
     };
 
     // 화면 높이 재계산 (툴바 변화 시)

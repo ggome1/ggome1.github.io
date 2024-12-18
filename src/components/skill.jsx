@@ -121,7 +121,7 @@ const skillData = {
 
 const SideMenu = ({ skills, curSkill, onClick }) => {
   return (
-    <div className="flex sm:flex-col gap-2 overflow-x-scroll">
+    <div onClick={(e) => e.stopPropagation()} className="flex sm:flex-col gap-2 overflow-x-scroll allow-scroll">
       {skills.map((skill, index) => (
         <div
           key={index}

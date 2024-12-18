@@ -47,7 +47,7 @@ const Nav = () => {
               behavior: "smooth",
             });
           }}
-          className={`cursor-pointer ${
+          className={`cursor-pointer w-full text-center ${
             curScroll === "INTRO" && "text-[#D8CEB5]"
           }`}
         >
@@ -60,7 +60,7 @@ const Nav = () => {
               behavior: "smooth",
             });
           }}
-          className={`cursor-pointer ${
+          className={`cursor-pointer w-full text-center ${
             curScroll === "INFO" && "text-[#D2E0FB]"
           }`}
         >
@@ -73,7 +73,7 @@ const Nav = () => {
               behavior: "smooth",
             });
           }}
-          className={`cursor-pointer ${
+          className={`cursor-pointer w-full text-center ${
             curScroll === "SKILL" && "text-[#e4a648]"
           }`}
         >
@@ -86,7 +86,7 @@ const Nav = () => {
               behavior: "smooth",
             });
           }}
-          className={`cursor-pointer ${
+          className={`cursor-pointer w-full text-center ${
             curScroll === "PROJECT" && "text-[#e5f051]"
           }`}
         >
@@ -99,7 +99,7 @@ const Nav = () => {
               behavior: "smooth",
             });
           }}
-          className={`cursor-pointer ${
+          className={`cursor-pointer w-full text-center ${
             curScroll === "FIN" && "text-black"
           }`}
         >

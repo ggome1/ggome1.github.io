@@ -59,7 +59,7 @@ const Project = () => {
           >
             <div
               key={index}
-              className="sm:rounded-br-[1.5rem] rounded-br-[1rem] sm:w-[20rem] sm:h-[20rem] w-[12rem] h-[12rem] cursor-pointer px-auto"
+              className="sm:rounded-br-[1.5rem] rounded-br-[1rem] sm:w-[20rem] sm:h-[20rem] w-[12rem] h-[12rem] px-auto"
               style={{
                 backgroundImage: `url(${process.env.PUBLIC_URL}/images/${item.thumbnail}.png)`,
                 backgroundRepeat: "no-repeat",
