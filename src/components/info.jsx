@@ -76,12 +76,12 @@ const Info = () => {
     },
   ];
   return (
-    <div className="h-[100dvh] py-8 px-[5rem] bg-[#1b1b1b] flex flex-col gap-[1rem]">
+    <div className="h-[100dvh] py-8 px-[5rem] bg-[#1b1b1b] flex flex-col gap-[10rem]">
       <div className="w-full text-[3.5rem] font-sba text-[#D2E0FB] flex items-center gap-8">
         <div className="text-[2.5rem]">01.</div>
         <div>INFO</div>
       </div>
-      <div className="flex flex-col h-full justify-center gap-[2rem]">
+      <div className="flex flex-col h-full  gap-[2rem]">
         <div className="flex flex-col">
           <motion.div
             initial={{ opacity: 0, scale: 1, y: 200 }}
