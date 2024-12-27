@@ -15,6 +15,7 @@ const projectData = [
     github: "https://github.com/Leets-Official/Fling-FE",
     url: "https://www.fling.today",
     thumbnail: "1",
+    disable: true,
   },
   {
     title: "REVIEW.ZIP",
@@ -22,6 +23,7 @@ const projectData = [
     github: "https://github.com/Review-zip/ReviewZip-FE",
     url: "https://www.reviewzip.site",
     thumbnail: "2",
+    disable: true,
   },
   {
     title: "PORTFOLIO",
@@ -76,7 +78,7 @@ const Project = () => {
                   </div>
                   <div className="flex flex-col gap-[0.5rem]">
                     <button onClick={() => window.open(item.github)} className="hover:text-white hover:bg-black sm:text-[1rem] text-[0.5rem] w-full border-2 border-black sm:px-[3rem] px-[1rem] sm:py-[0.5rem] py-[0.2rem] rounded-lg">깃허브 바로가기</button>
-                    <button onClick={() => window.open(item.url)} className="hover:text-white hover:bg-black sm:text-[1rem] text-[0.5rem] border-2 border-black sm:px-[3rem] sm:py-[0.5rem] py-[0.2rem] px-[1rem] rounded-lg">사이트 바로가기</button>
+                    <button onClick={() => window.open(item.url)} disabled={item.disable} className={`hover:text-white hover:bg-black sm:text-[1rem] text-[0.5rem] border-2 border-black sm:px-[3rem] sm:py-[0.5rem] py-[0.2rem] px-[1rem] rounded-lg ${item.disable && 'border-neutral-50 text-neutral-50 hover:bg-neutral-0 hover:border-neutral-50 hover:text-neutral-50'}`}>사이트 바로가기</button>
                   </div>
                 </div>
               )}

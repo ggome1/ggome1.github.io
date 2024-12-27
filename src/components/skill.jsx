@@ -28,22 +28,26 @@ const skillData = {
     {
       title: "React",
       logo: "react",
-      explain: "React를 활용해 프로젝트를 진행해 본 경험이 있으며, 이 사이트 또한 React로 개발하였습니다.",
+      explain:
+        "React를 활용해 프로젝트를 진행해 본 경험이 있으며, 이 사이트 또한 React로 개발하였습니다.",
     },
     {
       title: "NextJS",
       logo: "nextjs",
-      explain: "CSR, SSR, SSG 를 모두 진행한 경험이 있으며, 프로젝트 시작 전 라우팅 설계를 진행하였습니다",
+      explain:
+        "CSR, SSR, SSG 를 모두 진행한 경험이 있으며, 프로젝트 시작 전 라우팅 설계를 진행하였습니다",
     },
     {
       title: "Styled Component",
       logo: "styledcomponent",
-      explain: "개발을 학습하는 초기에 간단한 프로젝트를 Styled Component를 활용해 진행하였습니다.",
+      explain:
+        "개발을 학습하는 초기에 간단한 프로젝트를 Styled Component를 활용해 진행하였습니다.",
     },
     {
       title: "TailwindCSS",
       logo: "tailwindcss",
-      explain: "해당 사이트도 TailwindCSS로 개발하였으며, 현재 가장 즐겨 사용하는 CSS 라이브러리 입니다.",
+      explain:
+        "해당 사이트도 TailwindCSS로 개발하였으며, 현재 가장 즐겨 사용하는 CSS 라이브러리 입니다.",
     },
     {
       title: "Recoil",
@@ -75,7 +79,7 @@ const skillData = {
       explain: "DB를 설계해 보았으며 Query 또한 많이 작성해 보았습니다.",
     },
   ],
-  ETC: [
+  Tool: [
     {
       title: "AWS-EC2",
       logo: "ec2",
@@ -84,7 +88,8 @@ const skillData = {
     {
       title: "AWS-Amplify",
       logo: "aws",
-      explain: "React 프로젝트를 Amplify에 배포해 본 경험이 있으며, 개인적으로 배포하기 가장 편하다 생각합니다.",
+      explain:
+        "React 프로젝트를 Amplify에 배포해 본 경험이 있으며, 개인적으로 배포하기 가장 편하다 생각합니다.",
     },
     {
       title: "AWS-Route53",
@@ -121,7 +126,10 @@ const skillData = {
 
 const SideMenu = ({ skills, curSkill, onClick }) => {
   return (
-    <div onClick={(e) => e.stopPropagation()} className="flex sm:flex-col gap-2 overflow-x-scroll allow-scroll">
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="flex sm:flex-col gap-2 overflow-x-scroll allow-scroll"
+    >
       {skills.map((skill, index) => (
         <div
           key={index}

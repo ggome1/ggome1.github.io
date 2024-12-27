@@ -76,7 +76,7 @@ const Info = () => {
     },
   ];
   return (
-    <div className="h-[100dvh] py-8 px-[5rem] bg-[#1b1b1b] flex flex-col gap-[10rem]">
+    <div className="h-[100dvh] py-8 px-[5rem] bg-[#1b1b1b] flex flex-col sm:gap-[10rem] gap-[2rem]">
       <div className="w-full text-[3.5rem] font-sba text-[#D2E0FB] flex items-center gap-8">
         <div className="text-[2.5rem]">01.</div>
         <div>INFO</div>
